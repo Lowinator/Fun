@@ -16,7 +16,7 @@ public class BoyerMooreMajorityVoteAlgorithm {
             System.out.println("There is no majority in the given sequence.");
         }
 
-        // commit test 2
+        // commit test 2!
 
 
     }
