@@ -1,3 +1,4 @@
+// http://www.cs.rug.nl/~wim/pub/whh348.pdf
 public class BoyerMooreMajorityVoteAlgorithm {
 
     public static void main(String[] args) {
