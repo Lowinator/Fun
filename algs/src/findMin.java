@@ -17,13 +17,13 @@ public class findMin {
 
         // define f
 
-        int minValue = findMin(X, Y, f);
+//        int minValue = findMin(X, Y, f);
 
-        System.out.println("Minimum achievable value of f for all pairs is " + minValue);
+//        System.out.println("Minimum achievable value of f for all pairs is " + minValue);
     }
 
     // TODO get familiar with lambda expressions lol
-    static int findMin(int[] X, int[] Y, f) {
+/*    static int findMin(int[] X, int[] Y, f) {
 
         int currentMin = Integer.MAX_VALUE;
         for (int i = 0; i < X.length; i++) {
@@ -34,4 +34,5 @@ public class findMin {
 
         return currentMin;
     }
+*/
 }
