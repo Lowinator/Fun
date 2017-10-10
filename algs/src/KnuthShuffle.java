@@ -50,7 +50,7 @@ public class KnuthShuffle<T extends Comparable> {
 	
 		
 		test.shuffle(testArray);
-		
+
 		for (int i = 0; i < testArray.length; i++)
 			System.out.print(testArray[i] + " ");
 		
@@ -58,11 +58,10 @@ public class KnuthShuffle<T extends Comparable> {
 		
 		
 		test2.shuffle(testArray2);
-		
+
 		for (int i = 0; i < testArray2.length; i++)
 			System.out.print(testArray2[i] + " ");
-		
-		
+
 
 	}
 
