@@ -1,4 +1,6 @@
-// http://www.cs.rug.nl/~wim/pub/whh348.pdf
+package streamingAlgorithms;
+
+// Based on: http://www.cs.rug.nl/~wim/pub/whh348.pdf
 public class BoyerMooreMajorityVoteAlgorithm {
 
     public static void main(String[] args) {
