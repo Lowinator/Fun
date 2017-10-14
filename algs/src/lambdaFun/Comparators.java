@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.LinkedList;
 import java.util.List;
 
-public class lambdaExercise2 {
+public class Comparators {
 
     public static void main(String[] args) {
 

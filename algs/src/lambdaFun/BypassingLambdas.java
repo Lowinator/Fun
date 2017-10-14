@@ -3,7 +3,7 @@ package lambdaFun;
 // one way to pass behaviour around without using lambdas:
 // 1. create interface with signature of the method which encapsulates the behaviour,
 // 2. create class which implements the interface and encapsulates the behaviour you wish to pass,
-// 3. program the receiving method against the interface
+// 3. code the receiving method against the interface.
 
 
 
