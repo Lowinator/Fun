@@ -47,7 +47,7 @@ public class FrequentItems {
 
     }
 
-    // cash register model
+ /*   // cash register model
     // TODO figure out how to manage the
     Integer[] determineFrequentItemsCRM(int[] stream, double epsilon) {
 
@@ -85,4 +85,5 @@ public class FrequentItems {
         return candidates.keySet().toArray(new Integer[candidates.size()]);
 
     }
+    */
 }

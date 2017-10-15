@@ -1,4 +1,4 @@
-package lambdaFun;
+package funWithJava8;
 
 // one way to pass behaviour around without using lambdas:
 // 1. create interface with signature of the method which encapsulates the behaviour,
@@ -8,7 +8,7 @@ package lambdaFun;
 
 
 
-public class BypassingLambdas {
+public class LambdaBypassing {
 
     public static void main(String[] args) {
 

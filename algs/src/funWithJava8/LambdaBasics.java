@@ -1,6 +1,6 @@
-package lambdaFun;
+package funWithJava8;
 
-public class simpleLambdas {
+public class LambdaBasics {
 
     public static void main(String[] args) {
 

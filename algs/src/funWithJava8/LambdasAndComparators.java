@@ -1,10 +1,10 @@
-package lambdaFun;
+package funWithJava8;
 
 import java.util.Random;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Comparators {
+public class LambdasAndComparators {
 
     public static void main(String[] args) {
 
@@ -17,10 +17,11 @@ public class Comparators {
             ls.add(new Pair(rn.nextInt(11), rn.nextInt(11)));
         }
 
+
         // sorts by first element of the pairs
         ls.sort((a, b) -> Integer.compare(a.first, b.first));
 
-        System.out.println("Sorted by first pairs: " + ls);
+        System.out.println("\nSorted by first pairs: " + ls);
 
         ls.sort((a, b) -> Integer.compare(a.second, b.second));
 

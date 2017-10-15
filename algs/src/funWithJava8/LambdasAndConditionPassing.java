@@ -1,10 +1,10 @@
-package lambdaFun;
+package funWithJava8;
 
 import java.util.Arrays;
 import java.util.Vector;
 import java.util.function.Predicate;
 
-public class passConditions {
+public class LambdasAndConditionPassing {
 
     public static void main(String[] args) {
 
