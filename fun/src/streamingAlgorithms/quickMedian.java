@@ -3,6 +3,11 @@ package streamingAlgorithms;
 /*
 Computes the median in O(logn) bits of memory and O(logn) passes through the input array.
 
+The algorithm basically creates a histogram (2 bins/categories, zeroBin and oneBin) based on k MSBs and decides
+in which bin the median must be according to the medians rank and bin sizes. The process is repeated on
+the bin where the median must be. This way we keep creating histograms of histograms until we arrive at a
+bin with only 1 element, this is the median.
+
 */
 public class quickMedian {
 
@@ -19,14 +24,14 @@ public class quickMedian {
 
 
         // expected output: 0101
-        String[] arr = {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001"};
+         String[] arr = {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001"};
 
         System.out.println("Median is: " + computeMedian(arr));
 
     }
 
     /**
-     * Computes the median
+     * Computes the median.
      * @param arr Array of strings, each element represents a distinct binary number and has the same number of bits (padded with leading zeroes if necessary)
      * @return the median (number of rank ceil((m+1)/2) ) of the array as a string
      */
@@ -36,42 +41,29 @@ public class quickMedian {
         int m = (int) Math.ceil((arr.length+1)/2.0);
 
         String bitMask = "";
-        int firstBucket = 0;
-        int secondBucket = 0;
+        int zeroBin = 0;
 
-        boolean a = true;
-
-        while (a) {
-
-            System.out.println("loop: " + bitMask.length() );
-            System.out.println("median position: " + m);
+        while (bitMask.length() < arr[0].length()) {
 
             // puts elements which conform to the bitMask into one of two buckets
             for (String curr : arr) {
                 if (curr.startsWith(bitMask))
                     if (curr.charAt(bitMask.length()) == '0')
-                        firstBucket++;
-                    else
-                        secondBucket++;
+                        zeroBin++;
             }
 
             // decides in which bucket the median is located
-            if (firstBucket >= m)
+            if (zeroBin >= m)
                 bitMask = bitMask.concat("0");
             else {
-                m -= firstBucket;
+                m -= zeroBin;
                 bitMask = bitMask.concat("1");
             }
 
-            firstBucket = secondBucket = 0;
-
-            if (bitMask.length() == arr[0].length())
-                return bitMask;
+            zeroBin = 0;
         }
 
-
-        assert (false);
-        return null;
+        return bitMask;
     }
 
 }
