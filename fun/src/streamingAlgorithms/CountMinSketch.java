@@ -12,9 +12,13 @@ import java.util.Random;
 
 public class CountMinSketch {
 
+    // testing this is more difficult than I expected it to be lol
+
     public static void main(String[] args) {
 
-        // TODO tests!
+        FrequencySketch result;
+
+        Item[] sampleInput1 = {new Item(0, 1), new Item(1, 1), new Item(2, 1), new Item(3, 1), new Item(4, 1)};
 
     }
 
@@ -127,7 +131,6 @@ public class CountMinSketch {
             p = 1610612741; // prime
             this.a = rand.nextInt(p);
             this.b = rand.nextInt(p);
-
         }
 
         // rounds the given int to the next largest prime
@@ -150,12 +153,16 @@ public class CountMinSketch {
             BigInteger b = new BigInteger(String.valueOf(n));
             return Integer.parseInt(b.nextProbablePrime().toString());
         }
-
     }
 
     // represents items in the stream
     private static class Item {
         int ID;
         int weight; // c
+
+        Item(int ID, int weight) {
+            this.ID = ID;
+            this.weight = weight;
+        }
     }
 }
