@@ -10,7 +10,7 @@ public class greedyScheduling {
 
     /**
      * Assigns jobs to machines while minimizing the makespan.
-     * This is a (2-1/m) approximation algorithm meaning that the achieved
+     * This is a (2-1/m) approximation meaning that the achieved
      * makespan of the returned job-to-machine assignment is (2-1/m)*OPT in the
      * worst case, where OPT denotes the optimal makespan.
      * The approximation ratio is tight: http://www.math.ucsd.edu/~ronspubs/pro_16_albers.pdf
@@ -62,7 +62,6 @@ public class greedyScheduling {
     }
 
 
-    // RIP Java <8.
    /* // compares machines based on their loads
     private static class loadComparator implements Comparator<Machine> {
         @Override
