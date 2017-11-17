@@ -1,8 +1,7 @@
-package streamingAlgorithms;
+package streaming;
 
 /*
 More information:
-
 https://people.cs.umass.edu/~mcgregor/711S12/countmin.pdf
 
  */
@@ -23,11 +22,11 @@ public class CountMinSketch {
     }
 
     /**
-     * Randomized algorithm which returns a sketch which can be queried for an approximation of
+     * Randomized streaming algorithm which returns a sketch which can be queried for an approximation of
      * the frequency of each item in the given stream.
-     * The assumes the strict turnstile model (c>0 for all items).
+     * The algorithm assumes the strict turnstile model (c>0 for all items).
      *
-     * The algorithm starts by randomly distributing (pairwise independent hash family) items of the given stream among k groups.
+     * The algorithm starts by randomly distributing (uses a hashf. from a pairwise independent hash family) items of the given stream among k groups.
      * The frequency of an item j is approximated to be the sum of all frequencies within the group that j is
      * located in.
      * The described routine above is run t times in parallel, each row of the 2 dim array
@@ -37,6 +36,7 @@ public class CountMinSketch {
      * For a given item j the algorithm provides
      * an approximation of it's frequency apr[j] such that opt[j] <= apr[j] <= opt[j] + eps*Total, where
      * opt[j] is the actual frequency of j and Total is the sum of frequencies of all items.
+     *
      *
      * Space complexity is sublinear: O((1/eps) log(1/delt) log m) bits of storage, where m is the
      * maximal frequency of any element in the stream.
@@ -117,7 +117,7 @@ public class CountMinSketch {
     }
 
     /* Used to generate and encapsulate pairwise independent hash functions.
-    See see https://people.csail.mit.edu/ronitt/COURSE/S12/handouts/lec5.pdf , claim 5 for more information.
+    See https://people.csail.mit.edu/ronitt/COURSE/S12/handouts/lec5.pdf , claim 5 for more information.
      */
     private static class HashF {
 

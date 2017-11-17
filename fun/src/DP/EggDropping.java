@@ -3,7 +3,7 @@ package DP;
 import java.util.Arrays;
 
 /*
-More info: https://brilliant.org/wiki/egg-dropping/
+More infos: https://brilliant.org/wiki/egg-dropping/
  */
 public class EggDropping {
 

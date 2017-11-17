@@ -1,4 +1,4 @@
-package ioEfficientAlgorithms;
+package misc;
 
 /**
  * A cache aware algorithm which, given two arrays X, Y and a 2 dim function f, computes the smallest

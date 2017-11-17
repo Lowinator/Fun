@@ -1,4 +1,4 @@
-package streamingAlgorithms;
+package streaming;
 
 /*
 Computes the median in O(logn) bits of memory and O(logn) passes through the input array.
@@ -7,6 +7,9 @@ The algorithm basically creates a histogram (2 bins/categories, zeroBin and oneB
 in which bin the median must be according to the medians rank and bin sizes. The process is repeated on
 the bin where the median must be. This way we keep creating histograms of histograms until we arrive at a
 bin with only 1 element, this is the median.
+
+More information:
+https://stackoverflow.com/questions/3572640/interview-question-find-median-from-mega-number-of-integers
 
 */
 public class quickMedian {
@@ -65,5 +68,4 @@ public class quickMedian {
 
         return bitMask;
     }
-
 }

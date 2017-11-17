@@ -1,4 +1,4 @@
-package streamingAlgorithms;
+package streaming;
 
 // Based on: http://www.cs.rug.nl/~wim/pub/whh348.pdf
 public class BoyerMooreMajorityVoteAlgorithm {
@@ -18,10 +18,6 @@ public class BoyerMooreMajorityVoteAlgorithm {
         } else {
             System.out.println("There is no majority in the given sequence.");
         }
-
-        // commit test 3!
-
-
     }
 
     /**

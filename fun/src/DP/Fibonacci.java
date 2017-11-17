@@ -6,6 +6,7 @@ Chosen starting point for the sequence in the examples below is 0:
  */
 public class Fibonacci {
 
+    // TODO fix starting index error
     public static void main(String[] args) {
 
         Fibonacci t = new Fibonacci();
@@ -29,6 +30,7 @@ public class Fibonacci {
     // computes n-th fibonacci number in a top down fashion (memoization)
     public int fibTopDown(int n) {
 
+        // each recursive call uses new map?
         int[] mem = new int[n];
 
         // base cases
